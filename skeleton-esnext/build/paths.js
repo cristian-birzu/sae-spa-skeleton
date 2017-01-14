@@ -11,6 +11,8 @@ module.exports = {
   output: outputRoot,
   exportSrv: exportSrvRoot,
   doc: './doc',
-  e2eSpecsSrc: 'test/e2e/src/**/*.js',
-  e2eSpecsDist: 'test/e2e/dist/'
+  e2eSpecsSrc: 'test/e2e/browser/src/**/*.js',
+  e2eSpecsDist: 'test/e2e/browser/dist/',
+  jasmineSrc: 'test/unit/node/src/**/*.js',
+  jasmineDist: 'test/unit/node/dist/'
 };

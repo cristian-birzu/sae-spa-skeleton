@@ -4,7 +4,7 @@ var Karma = require('karma').Server;
 /**
  * Run test once and exit
  */
-gulp.task('test', function(done) {
+gulp.task('test-browser', function(done) {
   new Karma({
     configFile: __dirname + '/../../karma.conf.js',
     singleRun: true

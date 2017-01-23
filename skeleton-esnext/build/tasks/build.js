@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var pug = require('gulp-pug');
 var runSequence = require('run-sequence');
 var changed = require('gulp-changed');
 var plumber = require('gulp-plumber');
@@ -29,8 +30,9 @@ gulp.task('build-system', function() {
 gulp.task('build-html', function() {
   return gulp.src(paths.html)
     .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
-    .pipe(changed(paths.output, {extension: '.html'}))
+    .pipe(pug())
     .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(changed(paths.output, {extension: '.html'}))
     .pipe(gulp.dest(paths.output));
 });
 

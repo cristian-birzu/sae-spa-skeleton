@@ -5,7 +5,7 @@ var exportSrvRoot = 'export/';
 module.exports = {
   root: appRoot,
   source: appRoot + '**/*.js',
-  html: appRoot + '**/*.html',
+  html: appRoot + '**/*.{html,pug}',
   css: appRoot + '**/*.css',
   style: 'styles/**/*.css',
   output: outputRoot,

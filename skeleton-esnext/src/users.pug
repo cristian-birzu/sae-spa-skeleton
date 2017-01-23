@@ -4,10 +4,11 @@ template
     h2 ${heading}
     .row.au-stagger
       div(class="col-sm-6 col-md-3 card-container au-animate" repeat.for="user of users")
-        canvas(class="header-bg" width="250" height="70" blur-image.bind="image")
-        .avatar
-          img(src.bind="user.avatar_url" crossorigin ref="image")
-        .content
-          p.name ${user.login}
-          p
-            a(target="_blank" class="btn btn-default" href.bind="user.html_url") Contact
+        .card
+          canvas(class="header-bg" width="250" height="70" blur-image.bind="image")
+          .avatar
+            img(src.bind="user.avatar_url" crossorigin ref="image")
+          .content
+            p.name ${user.login}
+            p
+              a(target="_blank" class="btn btn-default" href.bind="user.html_url") Contact
